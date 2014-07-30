@@ -34,6 +34,13 @@
 */
 
 
+/* Application
+------------------------------------------------------------ */
+.clone-modal {
+    /*display: none;*/
+}
+
+
 /* Typography
 ------------------------------------------------------------ */
 
@@ -111,8 +118,52 @@ a img {
 
 /* List
 ------------------------------------------------------------ */
+#sidebarMENU {
+    position: fixed;
+    max-width: 250px;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    overflow: hidden;
+    z-index: 1000;
+    transition: 0.5s ease-in-out;
+}
 
+#sidebarMENU:hover {
+    max-width: 250px;
+}
+
+#sidebarMENU li {
+    list-style-type:none;
+    padding: 30px 0px;
+    font-size: 20px;
+}
+
+#sidebarMENU ul {
+    margin-top: 50%;
+}
+
+#sidebarMENU i {
+    width: 40px;
+}
+#sidebarMENU i.fa.fa-bolt.fa-2x{
+    padding-left: 6px;
+}
 
 
 /* Wrapper
 ------------------------------------------------------------ */
+
+#header {
+    padding-left: 60px;
+}
+
+
+#inner {
+    padding-left: 60px;
+    padding-left 60px;
+}
+
+
+#footer {
+    padding-left: 60px;
+}

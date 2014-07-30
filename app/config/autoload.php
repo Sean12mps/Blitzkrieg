@@ -49,6 +49,7 @@ $autoload['hooks'] = array_merge($autoload['hooks'], array(
 															 'childfx_script'
 															,'childfx_settings'
 															,'childfx_taxonomy'
+															,'childfx_ajax'
 															,'childfx_header'
 															,'childfx_post'
 															,'childfx_footer'

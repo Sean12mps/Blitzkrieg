@@ -14,6 +14,19 @@
 
 
 
-// remove_action('calibrefx_post_title', 'calibrefx_do_post_title');
+	remove_action('calibrefx_loop', 'calibrefx_do_loop');
 
-calibrefx();
+	add_action('calibrefx_loop', 'childfx_do_loop');
+
+	function childfx_do_loop(){
+?>
+
+	<!-- CLONE-MODAL -->
+		
+	<!-- CLONE-MODAL -->
+
+
+<?php
+	}
+
+	calibrefx();
