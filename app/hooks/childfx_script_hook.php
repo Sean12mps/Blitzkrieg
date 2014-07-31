@@ -34,7 +34,7 @@ function blitz_register_scripts(){
     wp_register_script('blitz-wheel', CHILD_JS_URL . '/mousewheel.js', array('jquery'));
     wp_register_script('blitz-petrify', CHILD_JS_URL . '/petrify.js', array('jquery'));
     wp_register_script('blitz-metro', CHILD_JS_URL . '/metro.min.js', array('jquery'));
-    wp_register_script('blitz-metroload', CHILD_JS_URL . '/metro-loader.js', array('jquery'));
+    // wp_register_script('blitz-metroload', CHILD_JS_URL . '/metro-loader.js', array('jquery'));
     wp_register_script('blitz-functions', CHILD_JS_URL . '/functions.js', array('jquery'));
 }
 
@@ -43,14 +43,15 @@ function blitz_register_scripts(){
  */
 add_action('calibrefx_meta', 'blitz_load_script');
 function blitz_load_script(){   
+    wp_enqueue_style('blitz-admin');
 	wp_enqueue_style('blitz-metroCSS');
 	wp_enqueue_style('blitz-metroIcon');
 
 	wp_enqueue_script('blitz-UI');
 	wp_enqueue_script('blitz-wheel');
 	wp_enqueue_script('blitz-petrify');
-    wp_enqueue_script('blitz-metro');
-	wp_enqueue_script('blitz-metroload');
+    // wp_enqueue_script('blitz-metro');
+	// wp_enqueue_script('blitz-metroload');
 	wp_enqueue_script('blitz-functions');
     
 }

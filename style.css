@@ -116,6 +116,12 @@ a img {
 }
 
 
+.tile-area-title {
+
+    cursor: pointer;
+}
+
+
 /* List
 ------------------------------------------------------------ */
 #sidebarMENU {
@@ -160,7 +166,6 @@ a img {
 
 #inner {
     padding-left: 60px;
-    padding-left 60px;
 }
 
 

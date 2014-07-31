@@ -36,21 +36,39 @@ $(function(){
 
 jQuery(document).ready(function($){
 
+
+	// 	DEBUG TOOLS
+		$('#wrapper').attr('state', 'shown');
+		$('.tile-area-title').on( 'click' , function(){
+			var state = $('#wrapper').attr('state');
+
+			if( state == "hidden" ){
+				
+				$('#wrapper').show();
+				$('#wrapper').attr('state','shown');
+			}
+			else if( state == "shown" ){
+				
+				$('#wrapper').hide();
+				$('#wrapper').attr('state','hidden');
+			}
+
+		});
+	// 	DEBUG TOOLS
+
+
+
 	// 	INIT METRO
 		$('body').addClass('metro');
 	// 	INIT METRO
 
 
-
-
 	// 	BUILD BLACK BOX
-	var buildBlackBox = function(){
-		$('body').append('<div id="blackbox" style="display:none;"></div>')
-
-	};
-	buildBlackBox();
+		var buildBlackBox = function(){
+			$('body').append('<div id="blackbox" style="display:none;"></div>')
+		};
+		buildBlackBox();
 	// 	BUILD BLACK BOX
-
 
 	
 	// 	BUILD SIDE MENU
@@ -120,7 +138,7 @@ jQuery(document).ready(function($){
 		 	$('#sidebarMENU').height(windowHeight);
 
 	};
-	buildMenu();
+	// buildMenu();
 	// 	BUILD SIDE MENU
 	 
 	
