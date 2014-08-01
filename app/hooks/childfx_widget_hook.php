@@ -45,7 +45,7 @@ function childfx_do_footer_widgets(){
 						<div class="<?php echo col_class(12,12,4); ?>">
 							<?php dynamic_sidebar( 'footer-2-sidebar' ); ?>
 						</div>
-						<div class="<?php //echo col_class(12,6,2); ?>">
+						<div class="<?php echo col_class(12,6,2); ?>">
 							<?php dynamic_sidebar( 'footer-3-sidebar' ); ?>
 						</div>
 					</div>

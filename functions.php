@@ -39,3 +39,7 @@ $calibrefx->load->do_autoload(CHILD_URI . '/app/config/autoload.php');
 
 add_image_size('post-archive', 620, 175, true);
 
+function get_post_data($postId) {
+    global $wpdb;
+    return $wpdb->get_row("SELECT * FROM $wpdb->posts WHERE ID=$postId");
+}

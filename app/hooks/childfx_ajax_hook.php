@@ -23,45 +23,38 @@ function childfx_ajax_handler() {
 	
 	switch($do){
 
-    /* get_interface */
-    case 'get_interface' :
+        case 'access_post':
+            
 
             $data = $_POST['data'];
 
-            switch ($data['key']) {
+            $the_slug = $data['value'];
 
-                case 'sidemenu':
-                    $response = array(
-                        "wrapper"           => '<ul class="menu-button"></ul>',
-                        "wrapper_recurse"   =>      '<li class="button-main"></li>',
-                        "recurse_data"      =>          '',
-                    );
-                break;
+            $args=array(
+                'name' => $the_slug,
+                'post_type' => 'post',
+                'post_status' => 'publish',
+                'posts_per_page' => 1
+            );
+            $my_posts = get_posts( $args );
+            if( $my_posts ) {
 
-                default:
-                break;
-
-
+                // echo 'slug on the first post found ' . $my_posts[0]->post_name;
+                $postID= $my_posts[0]->ID;
+                $dataX = get_post_data($postID);
+                // echo $dataX->post_title;
+                // echo $dataX->post_content;
+                $response = array(
+                    "html" => '',
+                    "title" => "$dataX->post_title",
+                    "content" => $dataX->post_content,
+                    "state" => "success",
+                );
             }
 
             
-    break;
-    /* get_interface */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        break;
 
 		// case 'update-reseller-account': 
 		// 	global $current_user;
